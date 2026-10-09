@@ -1,0 +1,138 @@
+.slider-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px 40px;
+  overflow: hidden;
+}
+
+/* Tagline top center */
+.slide-tagline {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.85);
+  z-index: 10;
+  margin-top: 10px;
+}
+
+/* Center Stage with Big Title + Bottle */
+.center-stage {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-title {
+  position: absolute;
+  font-size: clamp(5rem, 18vw, 15rem);
+  font-weight: 900;
+  color: #ffffff;
+  text-align: center;
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+  letter-spacing: -2px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.bottle-img {
+  position: relative;
+  z-index: 2;
+  height: clamp(280px, 58vh, 520px);
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0px 15px 25px rgba(0, 0, 0, 0.18));
+}
+
+/* Fruit Cutout Styling (Matching passion fruit image style) */
+.floating-decor {
+  position: absolute;
+  width: clamp(65px, 8vw, 100px);
+  height: clamp(65px, 8vw, 100px);
+  object-fit: contain;
+  z-index: 3;
+  pointer-events: none;
+  /* Realistic soft drop shadow under the fruit slice */
+  filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.25));
+}
+
+.decor-tl { top: 8%; left: 10%; transform: rotate(-10deg); }
+.decor-tr { top: 8%; right: 10%; transform: rotate(15deg); }
+.decor-bl { bottom: 14%; left: 8%; transform: rotate(-20deg); }
+.decor-br { bottom: 14%; right: 8%; transform: rotate(20deg); }
+
+/* Bottom Pill CTA Button */
+.explore-btn {
+  position: relative;
+  z-index: 10;
+  padding: 12px 28px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 40px;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: rgba(255, 255, 255, 0.55);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Navigation Buttons */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.nav-btn.prev { left: 24px; }
+.nav-btn.next { right: 24px; }
